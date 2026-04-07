@@ -50,8 +50,8 @@ export default function Dashboard() {
               padding: "1.8rem", textDecoration: "none", color: "inherit",
               boxShadow: "0 4px 15px rgba(0,0,0,0.03)", transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)", display: "block"
             }}
-            onMouseOver={e => e.currentTarget.style.boxShadow = "0 10px 25px rgba(79, 70, 229, 0.15)", transform = "translateY(-4px)"}
-            onMouseOut={e => e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.03)", transform = "translateY(0)"}>
+            onMouseOver={e => { e.currentTarget.style.boxShadow = "0 10px 25px rgba(79, 70, 229, 0.15)"; e.currentTarget.style.transform = "translateY(-4px)"; }}
+            onMouseOut={e => { e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.03)"; e.currentTarget.style.transform = "translateY(0)"; }}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
                 <div style={{ fontSize: 36 }}>{c.icon}</div>
                 <div style={{ textAlign: "right" }}>
