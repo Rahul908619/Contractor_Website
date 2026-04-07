@@ -11,7 +11,7 @@ export default function Dashboard() {
       try {
         const [gRes, eRes, sRes] = await Promise.all([
           axios.get("/gallery").catch(()=>({data:{data:[]}})),
-          axios.get("/enquiries").catch(()=>({data:{data:[]}})),
+          axios.get("/enquiry").catch(()=>({data:{data:[]}})),
           axios.get("/services").catch(()=>({data:{data:[]}}))
         ]);
         setStats({
@@ -36,33 +36,33 @@ export default function Dashboard() {
       <Navbar title="Admin Dashboard" />
       
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "3rem 1.5rem" }}>
-        <h2 style={{ fontFamily: "Georgia,serif", fontSize: "2rem", color: "#1A1510", margin: "0 0 8px" }}>
+        <h2 style={{ fontFamily: "'Inter', sans-serif", fontSize: "2rem", color: "#0F172A", margin: "0 0 8px", fontWeight: 800 }}>
           Welcome back to the SK Dashboard
         </h2>
-        <p style={{ color: "#6B5F45", fontSize: 15, marginBottom: "3rem" }}>
+        <p style={{ color: "#475569", fontSize: 16, marginBottom: "3rem" }}>
           Select a module below to update your public website in real-time.
         </p>
 
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))", gap: 24 }}>
           {cards.map(c => (
             <Link key={c.link} to={c.link} style={{
-              background: "#fff", border: "1px solid rgba(196,152,42,0.2)", borderRadius: 10,
+              background: "#fff", border: "1px solid #E2E8F0", borderRadius: 12,
               padding: "1.8rem", textDecoration: "none", color: "inherit",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.04)", transition: "all 0.2s", display: "block"
+              boxShadow: "0 4px 15px rgba(0,0,0,0.03)", transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)", display: "block"
             }}
-            onMouseOver={e => e.currentTarget.style.transform = "translateY(-4px)"}
-            onMouseOut={e => e.currentTarget.style.transform = "translateY(0)"}>
+            onMouseOver={e => e.currentTarget.style.boxShadow = "0 10px 25px rgba(79, 70, 229, 0.15)", transform = "translateY(-4px)"}
+            onMouseOut={e => e.currentTarget.style.boxShadow = "0 4px 15px rgba(0,0,0,0.03)", transform = "translateY(0)"}>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 16 }}>
                 <div style={{ fontSize: 36 }}>{c.icon}</div>
                 <div style={{ textAlign: "right" }}>
-                  <div style={{ color: "#C4982A", fontSize: 22, fontWeight: 700, fontFamily: "Georgia,serif" }}>{c.count}</div>
-                  <div style={{ color: "#8A7A60", fontSize: 11, letterSpacing: 1, textTransform: "uppercase" }}>{c.c}</div>
+                  <div style={{ color: "#4F46E5", fontSize: 24, fontWeight: 800, fontFamily: "'Inter', sans-serif" }}>{c.count}</div>
+                  <div style={{ color: "#64748B", fontSize: 11, letterSpacing: 1, textTransform: "uppercase", fontWeight: 600 }}>{c.c}</div>
                 </div>
               </div>
-              <h3 style={{ fontSize: 18, color: "#1A1510", margin: "0 0 8px", fontWeight: 700 }}>{c.title}</h3>
-              <p style={{ color: "#6B5F45", fontSize: 13, lineHeight: 1.6, margin: 0 }}>{c.desc}</p>
+              <h3 style={{ fontSize: 18, color: "#0F172A", margin: "0 0 8px", fontWeight: 700 }}>{c.title}</h3>
+              <p style={{ color: "#475569", fontSize: 14, lineHeight: 1.6, margin: 0 }}>{c.desc}</p>
               
-              <div style={{ marginTop: 20, color: "#C4982A", fontSize: 13, fontWeight: 600, display: "flex", alignItems: "center", gap: 6 }}>
+              <div style={{ marginTop: 20, color: "#4F46E5", fontSize: 13, fontWeight: 700, display: "flex", alignItems: "center", gap: 6 }}>
                 Open Module →
               </div>
             </Link>
