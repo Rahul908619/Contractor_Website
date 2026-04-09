@@ -101,7 +101,7 @@ function IconBathroom() {
 }
 
 function IconTile() {
-  const tiles = [[14,14],[26,14],[38,14],[14,26],[26,26],[38,26],[14,38],[26,38],[38,38]];
+  const tiles = [[14, 14], [26, 14], [38, 14], [14, 26], [26, 26], [38, 26], [14, 38], [26, 38], [38, 38]];
   return (
     <motion.svg width="52" height="52" viewBox="0 0 52 52" fill="none"
       whileHover={{ scale: 1.12 }}
@@ -151,7 +151,7 @@ function IconCommercial() {
 }
 
 function IconStaircase() {
-  const steps = [[14,36,6,4],[20,32,6,4],[26,28,6,4],[32,24,6,4],[32,28,6,10]];
+  const steps = [[14, 36, 6, 4], [20, 32, 6, 4], [26, 28, 6, 4], [32, 24, 6, 4], [32, 28, 6, 10]];
   return (
     <motion.svg width="52" height="52" viewBox="0 0 52 52" fill="none"
       whileHover={{ scale: 1.12 }}
@@ -183,10 +183,10 @@ function IconWall() {
       <line x1="14" y1="28" x2="38" y2="28" stroke="#AF52DE" strokeWidth="1" />
       <line x1="22" y1="16" x2="22" y2="36" stroke="#AF52DE" strokeWidth="1" />
       <line x1="30" y1="16" x2="30" y2="36" stroke="#AF52DE" strokeWidth="1" />
-      {[{cx:18,cy:19},{cx:26,cy:25},{cx:34,cy:19},{cx:18,cy:31},{cx:34,cy:31}].map((p,i)=>(
+      {[{ cx: 18, cy: 19 }, { cx: 26, cy: 25 }, { cx: 34, cy: 19 }, { cx: 18, cy: 31 }, { cx: 34, cy: 31 }].map((p, i) => (
         <motion.circle key={i} cx={p.cx} cy={p.cy} r="2" fill="#AF52DE"
-          animate={{ scale: [1,1.5,1], opacity: [0.6,1,0.6] }}
-          transition={{ duration: 1.5, repeat: Infinity, delay: i*0.3 }}
+          animate={{ scale: [1, 1.5, 1], opacity: [0.6, 1, 0.6] }}
+          transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.3 }}
           style={{ transformOrigin: `${p.cx}px ${p.cy}px` }}
         />
       ))}
@@ -195,12 +195,12 @@ function IconWall() {
 }
 
 const SERVICES_DATA = [
-  { Icon: IconMarble,     title: "Marble Flooring",    desc: "Premium Italian, Makrana & imported marble. Precision cutting, laying, and mirror polishing.", color: "#C4982A" },
-  { Icon: IconBathroom,   title: "Bathroom Design",    desc: "End-to-end luxury bathrooms — vanities, shower areas, walls, and custom anti-slip floors.", color: "#5AC8FA" },
-  { Icon: IconTile,       title: "Tile Installation",  desc: "Vitrified, ceramic, porcelain and mosaic tiling. Zero hollowness, perfect alignment.", color: "#4CD964" },
-  { Icon: IconCommercial, title: "Commercial Spaces",  desc: "Heavy-duty flooring for showrooms, hotels, malls, and commercial buildings.", color: "#5856D6" },
-  { Icon: IconStaircase,  title: "Staircase Work",     desc: "Premium granite & marble staircases — open-riser, classic designs with anti-skid grooves.", color: "#FF9500" },
-  { Icon: IconWall,       title: "Feature Walls",      desc: "Decorative marble walls, onyx TV backdrops, and 3D tile patterns for living rooms.", color: "#AF52DE" },
+  { Icon: IconMarble, title: "Marble Flooring", desc: "Premium Italian, Makrana & imported marble. Precision cutting, laying, and mirror polishing.", color: "#C4982A" },
+  { Icon: IconBathroom, title: "Bathroom Design", desc: "End-to-end luxury bathrooms — vanities, shower areas, walls, and custom anti-slip floors.", color: "#5AC8FA" },
+  { Icon: IconTile, title: "Tile Installation", desc: "Vitrified, ceramic, porcelain and mosaic tiling. Zero hollowness, perfect alignment.", color: "#4CD964" },
+  { Icon: IconCommercial, title: "Commercial Spaces", desc: "Heavy-duty flooring for showrooms, hotels, malls, and commercial buildings.", color: "#5856D6" },
+  { Icon: IconStaircase, title: "Staircase Work", desc: "Premium granite & marble staircases — open-riser, classic designs with anti-skid grooves.", color: "#FF9500" },
+  { Icon: IconWall, title: "Feature Walls", desc: "Decorative marble walls, onyx TV backdrops, and 3D tile patterns for living rooms.", color: "#AF52DE" },
 ];
 
 const WHY_US_IMAGES = [
@@ -337,7 +337,7 @@ export default function Home() {
 
         <div style={{ flex: 1, display: "flex", alignItems: "center", paddingTop: "5rem", position: "relative", zIndex: 2 }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "2rem", width: "100%", display: "grid", gridTemplateColumns: "1fr 400px", gap: "4rem", alignItems: "center" }}>
-            
+
             {/* Left Content */}
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
               <div style={{ display: "inline-flex", alignItems: "center", gap: 8, marginBottom: 20, background: "rgba(196,152,42,0.15)", border: "1px solid rgba(196,152,42,0.4)", borderRadius: 30, padding: "8px 20px", fontSize: 13, letterSpacing: 2, textTransform: "uppercase", color: "#E8C060", fontWeight: 700 }}>
@@ -350,7 +350,7 @@ export default function Home() {
               <p style={{ color: "#C8B8A0", fontSize: 18, lineHeight: 1.8, marginBottom: "2.5rem", maxWidth: 600 }}>
                 Stop dealing with unprofessional labor. We deliver <strong style={{ color: "#F5F0E6" }}>precision marble polishing, granite cutting, and perfect tile alignment</strong>. Guaranteed on-time delivery with no hidden costs.
               </p>
-              
+
               <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: "2rem" }}>
                 <a href={WA} target="_blank" rel="noopener noreferrer"
                   style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#25D366", color: "#fff", borderRadius: 4, padding: "16px 36px", fontSize: 16, fontWeight: 700, textDecoration: "none", boxShadow: "0 8px 24px rgba(37,211,102,.3)" }}>
@@ -423,7 +423,7 @@ export default function Home() {
                 </motion.button>
               </form>
             </motion.div>
-            
+
           </div>
         </div>
       </section>
@@ -443,7 +443,7 @@ export default function Home() {
             <h2 style={{ fontFamily: "Georgia,serif", fontSize: "2.8rem", fontWeight: 700, color: "#fff", margin: 0 }}>Before & After</h2>
             <p style={{ color: "#A89880", fontSize: 16, marginTop: 12 }}>See the dramatic difference precision craftsmanship makes.</p>
           </div>
-          
+
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "2.5rem" }}>
             {BEFORE_AFTER.map((item, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }}
@@ -504,7 +504,7 @@ export default function Home() {
       {/* 4. WHY CHOOSE US (PSYCHOLOGY SECTION) */}
       <section style={{ padding: "6rem 2rem", background: "#FAFAF5" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "4rem", alignItems: "center" }}>
-          
+
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <p style={{ color: "#C4982A", fontSize: 12, letterSpacing: 4, textTransform: "uppercase", marginBottom: 10, fontWeight: 700 }}>The SK Difference</p>
             <h2 style={{ fontFamily: "Georgia,serif", fontSize: "2.8rem", fontWeight: 700, color: "#1A1510", margin: "0 0 24px", lineHeight: 1.2 }}>
@@ -513,7 +513,7 @@ export default function Home() {
             <p style={{ color: "#6A5A40", fontSize: 16, lineHeight: 1.8, marginBottom: "2rem" }}>
               In the construction industry, delays and poor finishing are the biggest headaches. We solve that. We bring <strong style={{ color: "#1A1510" }}>100% accountability, transparent rates, and master-level craftsmanship</strong> to your doorstep.
             </p>
-            
+
             <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
               {[
                 { icon: "🎯", title: "Precision Work", desc: "Perfect leveling, no air gaps (hollowness), and hairline joints." },
@@ -573,28 +573,13 @@ export default function Home() {
             <h2 style={{ fontFamily: "Georgia,serif", fontSize: "2.8rem", fontWeight: 700, color: "#1A1510", margin: "0 0 16px" }}>Our Core Services</h2>
             <Link to="/services" style={{ color: "#C4982A", fontWeight: 700, textDecoration: "none", fontSize: 16 }}>View All Details →</Link>
           </div>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: "2rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "2rem" }}>
             {SERVICES_DATA.map((s, i) => (
-              <motion.div key={i}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.07 }}
-                whileHover={{ y: -6, boxShadow: `0 16px 40px ${s.color}22` }}
-                style={{
-                  background: "#fff", padding: "2rem", borderRadius: 14,
-                  boxShadow: "0 4px 20px rgba(0,0,0,0.05)",
-                  border: `1.5px solid ${s.color}33`,
-                  cursor: "default", transition: "border 0.3s"
-                }}
-              >
-                <div style={{ marginBottom: 18 }}><s.Icon /></div>
-                <h3 style={{
-                  fontFamily: "Georgia,serif", fontSize: "1.3rem",
-                  margin: "0 0 10px", color: "#1A1510",
-                  borderBottom: `2px solid ${s.color}44`, paddingBottom: 8
-                }}>{s.title}</h3>
-                <p style={{ color: "#6A5A40", fontSize: 14, lineHeight: 1.75, margin: 0 }}>{s.desc}</p>
+              <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.05 }}
+                style={{ background: "#fff", padding: "2rem", borderRadius: 8, boxShadow: "0 4px 20px rgba(0,0,0,0.04)", border: "1px solid #EAE5D8" }}>
+                <div style={{ fontSize: 36, marginBottom: 16 }}>{s.icon}</div>
+                <h3 style={{ fontFamily: "Georgia,serif", fontSize: "1.4rem", margin: "0 0 10px", color: "#1A1510" }}>{s.title}</h3>
+                <p style={{ color: "#6A5A40", fontSize: 14, lineHeight: 1.7, margin: 0 }}>{s.desc}</p>
               </motion.div>
             ))}
           </div>
@@ -628,7 +613,7 @@ export default function Home() {
         <div style={{ maxWidth: 1200, margin: "0 auto", textAlign: "center" }}>
           <p style={{ color: "#C4982A", fontSize: 12, letterSpacing: 4, textTransform: "uppercase", marginBottom: 10, fontWeight: 700 }}>Word of Mouth</p>
           <h2 style={{ fontFamily: "Georgia,serif", fontSize: "2.8rem", fontWeight: 700, color: "#1A1510", margin: "0 0 3rem" }}>What People Say</h2>
-          
+
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "2rem" }}>
             {REVIEWS.map((r, i) => (
               <motion.div key={i} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }}
